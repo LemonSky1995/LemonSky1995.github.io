@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mengtian Li</title>
+    <style type="text/css">
+        body {
+            background-color: whitesmoke;
+        }
+        h2 {
+            border-bottom: 1px solid gray;
+        }
+        li {
+            margin-top: 0.8em;
+            margin-left: -0.6em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        p {
+            text-align: justify;
+        }
+        #publications {
+            margin-top: -0.8em;
+        }
+        #publications td {
+            padding-top: 0.8em;
+            padding-left: 0.8em;
+        }
+        .container {
+            background-color: white;
+            max-width: 960px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            padding-left: 64px;
+            padding-right: 64px;
+            border-radius: 8px;
+            box-shadow: 1px 1px 8px gray;
+        }
+        .teaser {
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px gray;
+        }
+        .avatar {
+            border-radius: 50%;
+            box-shadow: 1px 1px 4px gray;
+        }
+    </style>
+    <script type="text/javascript">
+        const author_dict = {
+            "Mengtian Li": {
+                owner: true
+            },
+            "Jie Guo": {
+                homepage: "http://www.njumeta.com/"
+            },
+            "Ling-Qi Yan": {
+                homepage: "https://sites.cs.ucsb.edu/~lingqi/"
+            },
+            "Yanwen Guo": {
+                homepage: "http://www.njumeta.com/"
+            },
+            "Piaopiao Yu": {
+                homepage: "https://faculty.nuaa.edu.cn/yupiaopiao/zh_CN/index.htm"
+            },
+            "Quewei Li": {
+                homepage: "http://www.njumeta.com/liqw/"
+            },
+            "Chongyang Ma": {
+                homepage: "http://www.chongyangma.com/"
+            },
+            "Haibin Huang": {
+                homepage: "https://brotherhuang.github.io/"
+            },
+            "Wanquan Feng": {
+                homepage: "https://wanquanf.github.io/"
+            }
+        };
+
+        window.onload = function() {
+            addPublication(
+                ".images/hyperlora.png", "HyperLoRA: Parameter-Efficient Adaptive Generation for Portrait Synthesis",
+                ["Mengtian Li*", "Jinshu Chen*", "Wanquan Feng*", "Bingchuan Li", "Fei Dai", "Songtao Zhao", "Qian He"],
+                "CVPR 2025",
+                [
+                    { name: "Paper", url: "https://arxiv.org/abs/2503.16944" },
+                    { name: "Project Page", url: "hyperlora/" },
+                    { name: "Code", url: "https://github.com/LemonSky1995/ComfyUI-HyperLoRA" }
+                ]
+            );
+            addPublication(
+                ".images/mmfs.png", "Multi-Modal Face Stylization with a Generative Prior",
+                ["Mengtian Li*", "Yi Dong*", "Minxuan Lin", "Haibin Huang", "Pengfei Wan", "Chongyang Ma"],
+                "Computer Graphics Forum (Pacific Graphics 2023)",
+                [
+                    { name: "Paper", url: "https://arxiv.org/abs/2305.18009" },
+                    { name: "Project Page", url: "https://mmfs-paper.github.io/" },
+                    { name: "Code", url: "https://github.com/mmfs-paper/MMFS" }
+                ]
+            );
+            addPublication(
+                ".images/neuraldeform.png", "Implicit Neural Deformation for Sparse-View Face Reconstruction",
+                ["Moran Li", "Haibin Huang", "Yi Zheng", "Mengtian Li", "Nong Sang", "Chongyang Ma"],
+                "Computer Graphics Forum (Pacific Graphics 2022)",
+                [
+                    { name: "Paper", url: "https://arxiv.org/abs/2112.02494" }
+                ]
+            );
+            addPublication(
+                ".images/daa.png", "Dual Attention Autoencoder for All-weather Outdoor Lighting Estimation",
+                ["Piaopiao Yu", "Jie Guo", "Longhai Wu", "Cheng Zhou", "Mengtian Li", "Chenchen Wang", "Yanwen Guo"],
+                "SCIENCE CHINA Information Sciences 2021",
+                [
+                    { name: "Paper", url: "http://scis.scichina.com/en/2021/210102.pdf" }
+                ]
+            );
+            addPublication(
+                ".images/volst.png", "Volumetric Appearance Stylization with Stylizing Kernel Prediction Network",
+                ["Jie Guo*", "Mengtian Li*", "Zijing Zong", "Yuntao Liu", "Jingwu He", "Yanwen Guo", "Ling-Qi Yan"],
+                "ACM Transactions on Graphics (SIGGRAPH 2021)",
+                [
+                    { name: "Paper", url: "http://sites.cs.ucsb.edu/~lingqi/publications/paper_volst.pdf" },
+                    { name: "Video", url: "http://sites.cs.ucsb.edu/~lingqi/publications/video_volst.mp4"}
+                ]
+            );
+            addPublication(
+                ".images/deepbrdf.png", "A Deep Representation for Manipulating Measured BRDF",
+                ["Bingyang Hu", "Jie Guo", "Yanjun Chen", "Mengtian Li", "Yanwen Guo"],
+                "Computer Graphics Forum (Eurographics 2020)",
+                []
+            );
+            addPublication(
+                ".images/gradnet.png", "GradNet: Unsupervised Deep Screened Poisson Reconstruction for Gradient-Domain Rendering",
+                [ "Jie Guo*", "Mengtian Li*", "Quewei Li", "Yuting Qiang", "Bingyang Hu", "Yanwen Guo", "Ling-Qi Yan" ],
+                "ACM Transactions on Graphics (SIGGRAPH Asia 2019)",
+                [
+                    { name: "Paper", url: "http://sites.cs.ucsb.edu/~lingqi/publications/paper_gradnet.pdf" },
+                    { name: "Code", url: "https://github.com/LemonSky1995/Deep-Poisson-Reconstruction"}
+                ]
+            );
+            addPublication(
+                ".images/sgillu.png", "Deep Spherical Gaussian Illumination Estimation for Indoor Scene",
+                ["Mengtian Li", "Jie Guo", "Xiufen Cui", "Rui Pan", "Yanwen Guo", "Chenchen Wang", "Piaopiao Yu", "Fei Pan"],
+                "ACM Multimedia Asia 2019",
+                []
+            );
+        };
+
+        function addPublication(teaser, title, author_list, conf, links) {
+            var table = document.getElementById("publications");
+            var row = table.insertRow();
+            var teaser_cell = row.insertCell();
+            var img = document.createElement("img");
+            img.className = "teaser"
+            img.src = teaser;
+            img.alt = "Teaser";
+            img.width = 128;
+            teaser_cell.appendChild(img);
+            var content_cell = row.insertCell();
+            var content_html = "";
+            var has_coauthor = false;
+            for (const author of author_list) {
+                if (content_html.length > 0) {
+                    content_html += ", ";
+                }
+                var _author = author;
+                if (author.slice(-1) == "*") {
+                    has_coauthor = true;
+                    _author = author.slice(0, -1);
+                }
+                var prefix = "", postfix = "";
+                if (_author in author_dict) {
+                    if ("owner" in author_dict[_author] && author_dict[_author]["owner"]) {
+                        prefix += "<b>";
+                        postfix = "</b>" + postfix;
+                    }
+                    if ("homepage" in author_dict[_author]) {
+                        prefix += "<a href=\"" + author_dict[_author]["homepage"] + "\" target=\"_blank\">";
+                        postfix = "</a>" + postfix;
+                    }
+                }
+                if (_author == author) {
+                    content_html += prefix + _author + postfix;
+                } else {
+                    content_html += prefix + _author + "<sup>*</sup>" + postfix;
+                }
+            }
+            // if (has_coauthor) {
+            //     content_html += " (<sup>*</sup>Equal contribution)";
+            // }
+            content_html = "<big><b>" + title + "</b></big><br>" + content_html;
+            content_html += "<br><i>" + conf + "</i>";
+            if (links.length > 0) {
+                content_html += "<br>";
+                for (const link of links) {
+                    content_html += "[<a href=\"" + link["url"] + "\" target=\"_blank\">" + link["name"] + "</a>] ";
+                }
+            }
+            content_cell.innerHTML = content_html;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td width="75%">
+                    <h1>Mengtian Li (李梦天)</h1>
+                    <h3>Algorithm Engineer in Generative AI</h3>
+                    <p style="margin-top: -1em;">ByteDance, Beijing, China</p>
+                    <p>Email: <a href="mailto:lemonsky1995@gmail.com">lemonsky1995@gmail.com</a><br>Wechat: cherish-jinjin</p>
+                </td>
+                <td width="25%"><img class="avatar" src=".images/avatar.png" width="75%"></td>
+            </tr>
+        </table>
+        <h2>Biography</h2>
+        <p>
+            I am currently an algorithm engineer in Intelligent Creation at <a href="https://www.bytedance.com/en/" target="_blank">ByteDance</a>, focusing on image/video generation.
+            From July 2020 to January 2024, I served as an algorithm engineer in the <a href="http://www.chongyangma.com/team/index.html" target="_blank">Graphics AI team</a> at <a href="https://www.kuaishou.com/" target="_blank">Kuaishou</a>,
+            where I developed some amazing special effects based on Diffusion, GAN and traditional image processing,
+            and meanwhile participated in a rendering engine project for virtual human.
+            From June 2019 to September 2019, I was an intern in Interactive Entertainment Social (IES) at ByteDance.
+            I got my M.Sc. degree from <a href="https://www.nju.edu.cn/en/" target="_blank">Nanjing University</a> in 2020, supervised by <a href="http://www.njumeta.com/" target="_blank">Jie Guo</a>.
+            Previously, I received my B.Sc. degree from <a href="https://www.cumt.edu.cn/" target="_blank">China University of Mining and Technology</a> in 2017.
+        </p>
+        <h2>Publications <span style="font-size: 60%; font-style: normal;">(<sup>*</sup> Equal contribution)</span></h2>
+        <table id="publications"></table>
+        <h2>Awards</h2>
+        <ul>
+            <li>Huawei Scholarship, 2019</li>
+            <li>Outstanding Student Cadres, Jiangsu Province, 2017</li>
+            <li>IEEEXtreme Programming Competition, Top 2%, 2016</li>
+            <li>ACM-ICPC Asia Regional Contest, China Final, Silver Medal, 2016</li>
+            <li>ACM-ICPC Asia Regional Contest, Qingdao Site, Silver Medal, 2016</li>
+            <li>China Collegiate Programming Contest, Hefei Site, Silver Medal, 2016</li>
+            <li>National Undergraduate Scholarship, 2014 ~ 2016</li>
+        </ul>
+    </div>
+</body>
+</html>
